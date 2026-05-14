@@ -1,9 +1,7 @@
 local ERR_MIXIN_FUNC_NOT_FOUND = "Trying a mixin on non existent function %s on table %s"
 local ERR_MIXIN_CANT_COPY = "A base function %s on table %s could not be copied for a mixin: %s"
 
-if not fun then
-	fun = {}
-end
+fun = fun or {}
 
 if not fun.clone then
 	--- Clones a function invalidating all upvalue references. May return `nil` if the function could not be cloned.
